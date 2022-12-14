@@ -6,63 +6,66 @@ const colorThemes = require("./colorThemes.js");
 const borderThemes = require("./borderThemes.js");
 
 class CustomReporter {
-    static errorAffirmations;
+    affirmation;
+    colors;
+    colorGradient;
+    border;
+    loops;
 
     constructor(globalConfig, reporterOptions, reporterContext) {
         this._globalConfig = globalConfig;
         this._options = reporterOptions;
         this._context = reporterContext;
+
+        // Select color/border/loops from user input
+        if (this._options) {
+            if (this._options.colorTheme) {
+                // Get color theme from user (Defaults to "love")
+                this.colors =
+                    colorThemes[this._options.colorTheme] || colorThemes.love;
+            }
+            if (this._options.borderTheme) {
+                // Get border theme from user (Defaults to "hearts2")
+                this.border =
+                    borderThemes[this._options.borderTheme] ||
+                    borderThemes.hearts2;
+            }
+            // Get loops from user (Defaults to 2)
+            if (this._options.loops) {
+                this.loops = Number(this._options.loops) || 2;
+            }
+            // Create gradient
+            this.colorGradient = createGradient(this.colors, this.loops);
+        }
     }
 
     async onRunStart() {
         // Fetch affirmations from API by category.id
-        const categoryId = 3; // "Error" category
+        const categoryId = 3; // "TDD" category
         const category = await fetchCategories(categoryId);
         if (!category) return;
 
         // pull affirmations out into errorAffirmations property
-        CustomReporter.errorAffirmations = category.affirmations.map(
-            (row) => row.text
+        const errorAffirmations = category.affirmations.map((row) => row.text);
+        // get random number within length of errorAffirmations array
+        const randomNumber = getRandomNumber(
+            CustomReporter.errorAffirmations.length
         );
+
+        this.affirmation = errorAffirmations[randomNumber];
     }
 
     onRunComplete(test, results) {
-        // User params
-        let colors;
-        let border;
-        let loops;
-
-        // Select color/border/loops from user input
-        colors = colorThemes[this._options.colorTheme] || null;
-        border = borderThemes[this._options.borderTheme] || null;
-        loops = Number(this._options.loops) || null;
-
-        // Create gradient
-        const colorGradient = createGradient(colors, loops);
-
         if (results.numFailedTests > 0) {
-            // get random number within length of errorAffirmations array
-            const randomNumber = getRandomNumber(
-                CustomReporter.errorAffirmations.length
-            );
-            const affirmation = CustomReporter.errorAffirmations[randomNumber];
-
             // display affirmation in terminal
-            // Border
-            console.log();
-            console.log(chalk.bold(colorGradient(border[0])));
-            console.log(chalk.bold(colorGradient(border[1])));
-            console.log();
-            // Affirmation
-            console.log(
-                chalk.bold.hex(colors[0])(
-                    CustomReporter.errorAffirmations[randomNumber]
-                )
-            );
-            console.log();
-            // Border
-            console.log(chalk.bold(colorGradient(border[1])));
-            console.log(chalk.bold(colorGradient(border[0])));
+            console.log(); // Newline
+            console.log(chalk.bold(this.colorGradient(this.border[0]))); // Border
+            console.log(chalk.bold(this.colorGradient(this.border[1]))); // Border
+            console.log(); // Newline
+            console.log(chalk.bold.hex(this.colors[0])(this.affirmation)); // Affirmation
+            console.log(); // Newline
+            console.log(chalk.bold(this.colorGradient(this.border[1]))); // Border
+            console.log(chalk.bold(this.colorGradient(this.border[0]))); // Border
         }
     }
 
@@ -76,6 +79,7 @@ class CustomReporter {
 }
 
 // Utility functions
+// Loops through colors array and creates a new version with looping colors
 function createGradient(colors = love, loops = 2) {
     let colorsRepeat = [];
     let length = colors.length;
