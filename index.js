@@ -21,22 +21,25 @@ class CustomReporter {
         if (this._options) {
             if (this._options.colorTheme) {
                 // Get color theme from user (Defaults to "love")
-                this.colors =
-                    colorThemes[this._options.colorTheme] || colorThemes.love;
+                this.colors = colorThemes[this._options.colorTheme] || null;
             }
             if (this._options.borderTheme) {
                 // Get border theme from user (Defaults to "hearts2")
-                this.border =
-                    borderThemes[this._options.borderTheme] ||
-                    borderThemes.hearts2;
+                this.border = borderThemes[this._options.borderTheme] || null;
             }
             // Get loops from user (Defaults to 2)
             if (this._options.loops) {
-                this.loops = Number(this._options.loops) || 2;
+                this.loops = Number(this._options.loops) || null;
             }
-            // Create gradient
-            this.colorGradient = createGradient(this.colors, this.loops);
         }
+
+        // Set defaults for colors/border/loops if null
+        if (!this.colors) this.colors = colorThemes.love;
+        if (!this.border) this.border = borderThemes.hearts2;
+        if (!this.loops) this.loops = 2;
+
+        // Create gradient
+        this.colorGradient = createGradient(this.colors, this.loops);
     }
 
     async onRunStart() {
@@ -49,15 +52,27 @@ class CustomReporter {
         const errorAffirmations = category.affirmations.map((row) => row.text);
         // get random number within length of errorAffirmations array
         const randomNumber = getRandomNumber(errorAffirmations.length);
-
+        // select random affirmation from array
         this.affirmation = errorAffirmations[randomNumber];
+
+        const affirmationLength = this.affirmation.length;
+        const borderLength = this.border[0].length;
+        const numInsertSpaces = (borderLength - affirmationLength) / 2;
+        let insertSpaces = [];
+        for (let i = 0; i < numInsertSpaces; i++) {
+            this.affirmation = " " + this.affirmation;
+        }
+
+        console.log();
+        console.log("affirmation length: ", affirmationLength);
+        console.log("border length: ", borderLength);
+        console.log("insertSpaces: ", insertSpaces);
     }
 
     onRunComplete(test, results) {
         if (results.numFailedTests > 0) {
             // display affirmation in terminal
             console.log(); // Newline
-            console.log(this.border);
             console.log(chalk.bold(this.colorGradient(this.border[0]))); // Border
             console.log(chalk.bold(this.colorGradient(this.border[1]))); // Border
             console.log(); // Newline
