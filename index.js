@@ -48,9 +48,7 @@ class CustomReporter {
         // pull affirmations out into errorAffirmations property
         const errorAffirmations = category.affirmations.map((row) => row.text);
         // get random number within length of errorAffirmations array
-        const randomNumber = getRandomNumber(
-            CustomReporter.errorAffirmations.length
-        );
+        const randomNumber = getRandomNumber(errorAffirmations.length);
 
         this.affirmation = errorAffirmations[randomNumber];
     }
