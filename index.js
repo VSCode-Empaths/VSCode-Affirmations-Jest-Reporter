@@ -57,6 +57,7 @@ class CustomReporter {
         if (results.numFailedTests > 0) {
             // display affirmation in terminal
             console.log(); // Newline
+            console.log(this.border);
             console.log(chalk.bold(this.colorGradient(this.border[0]))); // Border
             console.log(chalk.bold(this.colorGradient(this.border[1]))); // Border
             console.log(); // Newline
