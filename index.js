@@ -58,15 +58,9 @@ class CustomReporter {
         const affirmationLength = this.affirmation.length;
         const borderLength = this.border[0].length;
         const numInsertSpaces = (borderLength - affirmationLength) / 2;
-        let insertSpaces = [];
         for (let i = 0; i < numInsertSpaces; i++) {
             this.affirmation = " " + this.affirmation;
         }
-
-        console.log();
-        console.log("affirmation length: ", affirmationLength);
-        console.log("border length: ", borderLength);
-        console.log("insertSpaces: ", insertSpaces);
     }
 
     onRunComplete(test, results) {
