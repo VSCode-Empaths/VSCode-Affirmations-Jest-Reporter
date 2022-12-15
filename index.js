@@ -6,30 +6,33 @@ const colorThemes = require("./colorThemes.js");
 const borderThemes = require("./borderThemes.js");
 
 class CustomReporter {
+    mode;
     affirmation;
     colors;
     colorGradient;
     border;
     loops;
+    infoTextColor;
 
     constructor(globalConfig, reporterOptions, reporterContext) {
         this._globalConfig = globalConfig;
         this._options = reporterOptions;
         this._context = reporterContext;
 
+        this.infoTextColor = "#F99F9F";
         // Select color/border/loops from user input
         if (this._options) {
+            // Get mode from user (Defaults to "normal")
+            this.mode = this._options.mode || null;
+            // Get loops from user (Defaults to 2)
+            this.loops = Number(this._options.loops) || null;
+            // Get color theme from user (Defaults to "love")
             if (this._options.colorTheme) {
-                // Get color theme from user (Defaults to "love")
                 this.colors = colorThemes[this._options.colorTheme] || null;
             }
+            // Get border theme from user (Defaults to "hearts2")
             if (this._options.borderTheme) {
-                // Get border theme from user (Defaults to "hearts2")
                 this.border = borderThemes[this._options.borderTheme] || null;
-            }
-            // Get loops from user (Defaults to 2)
-            if (this._options.loops) {
-                this.loops = Number(this._options.loops) || null;
             }
         }
 
@@ -37,6 +40,7 @@ class CustomReporter {
         if (!this.colors) this.colors = colorThemes.love;
         if (!this.border) this.border = borderThemes.hearts2;
         if (!this.loops) this.loops = 2;
+        if (!this.mode) this.mode = "normal";
 
         // Create gradient
         this.colorGradient = createGradient(this.colors, this.loops);
@@ -55,6 +59,7 @@ class CustomReporter {
         // select random affirmation from array
         this.affirmation = errorAffirmations[randomNumber];
 
+        // Insert spaces before affirmation to center it within borders
         const affirmationLength = this.affirmation.length;
         const borderLength = this.border[0].length;
         const numInsertSpaces = (borderLength - affirmationLength) / 2;
@@ -75,6 +80,23 @@ class CustomReporter {
             console.log(chalk.bold(this.colorGradient(this.border[1]))); // Border
             console.log(chalk.bold(this.colorGradient(this.border[0]))); // Border
         }
+        if (this.mode === "info") {
+            console.log();
+            console.log(
+                chalk.bold.hex(this.infoTextColor)(
+                    `ERROR AFFIRMATIONS INFO\n` +
+                        `(disable this msg: package.json/jest/reporters/error-affirmations/mode=normal)\n` +
+                        `                                                                       ^      \n` +
+                        `color themes:\n` +
+                        `love, gratitude, happiness, serenity, thoughtful,\n` +
+                        `spooky, optimistic, rainbow, mono, white, grey\n` +
+                        `\n` +
+                        `border themes:\n` +
+                        `bamboo, waves, simple, fence, frame, hearts1,\n` +
+                        `hearts2, banner, dotty, coffeeLuv1, coffeeLuv2, smiley\n`
+                )
+            );
+        }
     }
 
     getLastError() {
@@ -94,8 +116,12 @@ function createGradient(colors = love, loops = 2) {
     for (let i = 0; i < loops * 2; i++) {
         for (let j = 0; j < length; j++) {
             if (i % 2 == 0) {
+                // Outer iterator is even
+                // Loop forwards from beginning of colors array
                 colorsRepeat.push(colors[j]);
             } else {
+                // Outer iterator is odd
+                // Loop backwards from end of colors array
                 colorsRepeat.push(colors[length - j - 1]);
             }
         }
