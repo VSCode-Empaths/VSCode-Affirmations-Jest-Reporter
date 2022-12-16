@@ -75,7 +75,9 @@ class CustomReporter {
             console.log(createGradString(this.border[0], this.colorGrad)); // Border
             console.log(createGradString(this.border[1], this.colorGrad)); // Border
             console.log(); // Newline
-            console.log(createColorString(this.affirmation, this.colors[0], "bold")); // Affirmation
+            console.log(
+                createColorString(this.affirmation, this.colors[0], "bold")
+            ); // Affirmation
             console.log(); // Newline
             console.log(createGradString(this.border[1], this.colorGrad)); // Border
             console.log(createGradString(this.border[0], this.colorGrad)); // Border
@@ -83,12 +85,22 @@ class CustomReporter {
 
         if (this.mode === "info") {
             console.log();
-            console.log(createColorString(infoMsg.header, infoTxtColors.primary, "bold"));
-            console.log(createColorString(infoMsg.disable, infoTxtColors.secondary));
-            console.log(createColorString(infoMsg.jestConfig, infoTxtColors.secondary));
-            console.log(createColorString(infoMsg.links, infoTxtColors.secondary));
+            console.log(
+                createColorString(infoMsg.header, infoTxtColors.primary, "bold")
+            );
+            console.log(
+                createColorString(infoMsg.disable, infoTxtColors.secondary)
+            );
+            console.log(
+                createColorString(infoMsg.jestConfig, infoTxtColors.secondary)
+            );
+            console.log(
+                createColorString(infoMsg.links, infoTxtColors.secondary)
+            );
 
-            console.log(createColorString(infoMsg.tableHeader, infoTxtColors.secondary));
+            console.log(
+                createColorString(infoMsg.tableHeader, infoTxtColors.secondary)
+            );
             // Create string with color name + pattern
             const colorInfoStrings = createColorInfoStrings(colorThemes);
             // Create string with border name + pattern
@@ -97,14 +109,24 @@ class CustomReporter {
                 infoTxtColors.body
             );
             // Find larger object (for formatting)
-            const longerArray = findLongerArrayLength(colorInfoStrings, borderStrings);
+            const longerArray = findLongerArrayLength(
+                colorInfoStrings,
+                borderStrings
+            );
 
             // Log table of colors and borders
             for (let i = 0; i < longerArray; i++) {
-                const colorString = colorInfoStrings[i] || "                          ";
+                const colorString =
+                    colorInfoStrings[i] || "                        ";
                 const borderString = borderStrings[i] || "";
-                const heart = createColorString("♥", infoTxtColors.primary, "bold");
-                console.log(heart + "    " + colorString + "      " + borderString);
+                const heart = createColorString(
+                    "♥",
+                    infoTxtColors.primary,
+                    "bold"
+                );
+                console.log(
+                    heart + "    " + colorString + "      " + borderString
+                );
             }
             console.log();
         }
@@ -112,7 +134,9 @@ class CustomReporter {
 
     getLastError() {
         if (this._shouldFail) {
-            return new Error("Error-Affirmations isn't doing too hot... but you are!");
+            return new Error(
+                "Error-Affirmations isn't doing too hot... but you are!"
+            );
         }
     }
 }
