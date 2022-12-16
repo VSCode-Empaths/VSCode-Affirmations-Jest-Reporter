@@ -9,6 +9,8 @@ Error Affirmations - Jest Reporter</h1>
 
 Error Affirmations Jest Reporter gives you much needed code-related affirmations whenever your tests fail.
 
+GitHub - https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter
+
 <br>
 
 ### **Preview**
