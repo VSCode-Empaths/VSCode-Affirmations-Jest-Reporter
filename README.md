@@ -57,15 +57,14 @@ For example, add the following "jest" configuration in your package.json file:
 ### (Optionally) Customize the **color** and **border** theme
 
 ```json
- "jest": {
+"jest": {
      "reporters": [
          "default",
-            ["error-affirmations", {
-                "colorTheme": "driven",
-                "borderTheme": "waves"
-            }]
+        ["error-affirmations",
+            { "color": "driven", "border": "waves"}
         ]
-    },
+    ]
+},
 ```
 
 <br>
