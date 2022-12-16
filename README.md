@@ -97,13 +97,11 @@ For example, add the following "jest" configuration in your package.json file:
 
 ## **Check out our other apps!**
 
-#### **Error Affirmations** - Jest Reporter:
-
-https://www.npmjs.com/package/error-affirmations
-
 #### **Error Affirmations** - VS Code Extension:
 
 https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations
+
+<img src="./images/notificationbar.png" alt="Error-Affirmations-Logo" width="600"/>
 
 #### **Error Affirmations** - Website:
 
