@@ -1,10 +1,17 @@
 {
     "name": "error-affirmations",
+    "publisher": "VSCodeEmpaths",
     "version": "1.0.33",
     "description": "Get affirmations when your tests fail!",
     "main": "index.js",
     "scripts": {
         "test": "node index.js"
+    },
+    "jest": {
+        "reporters": [
+            "default",
+            "error-affirmations"
+        ]
     },
     "keywords": [
         "affirmation",
