@@ -51,7 +51,7 @@ function createBorderInfoStrings(borderThemes, color) {
 // Adds spaces to the beginning of a string to center it within an area
 function centerString(string, areaLength) {
     let spaces = "";
-    const numInsertSpaces = (areaLength - string.length) / 2;
+    const numInsertSpaces = Math.ceil(areaLength - string.length) / 2;
     for (let i = 0; i < numInsertSpaces; i++) {
         spaces += " ";
     }
@@ -77,30 +77,6 @@ function createGrad(colors = colorThemes.love, loops = 2) {
     }
     return gradient(colorsRepeat);
 }
-
-`                    ERROR AFFIRMATIONS INFO                                   \n` +
-    `(disable this msg: package.json/jest/reporters/error-affirmations/mode=normal)\n` +
-    `                                                                       ^      \n` +
-    `
-    | colorTheme |
-    | ---------- |
-    | love       |
-    | happiness  |
-    | serenity   |
-    | driven     |
-    | spooky     |
-    | optimistic |
-    | rainbow    |
-    | mono       |
-    | white      |
-    | grey       |
-    |            |
-    |            |\n` +
-    `border themes:\n` +
-    `bamboo, waves, simple, fence, frame, hearts1,\n` +
-    `hearts2, banner, dotty, coffeeLuv1, coffeeLuv2, smiley\n` +
-    `\n` +
-    `https://www.npmjs.com/package/error-affirmations\n`;
 
 module.exports = {
     createGrad,

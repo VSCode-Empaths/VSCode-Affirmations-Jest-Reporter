@@ -15,10 +15,11 @@ const infoMsg = {
 `♥    USAGE: (place in package.json)                           
 ♥    "jest":
 ♥      "reporters": [
-♥        "default", [
-♥          [ "error-affirmations", 
-♥            {"mode":"normal", "color":"driven", "border":"bamboo"} 
-♥          ]
+♥        "default",
+♥        [ 
+♥          "error-affirmations", 
+♥          {"mode":"normal", "color":"driven", "border":"bamboo"} 
+♥        ]
 ♥      ]
 ♥    },
 ♥`,
