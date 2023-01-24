@@ -1,6 +1,9 @@
-# Error Affirmations - Jest Reporter
+<div style="display:grid; justify-content:center; grid-template-columns:repeat(3,auto);">
+ 
+<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png" alt="Error-Affirmations-Logo" width="225" style="margin-bottom:-10px"/><h1>Error Affirmations - Jest Reporter</h1>
+</div>
 
-![Error-Affirmations Logo](./images/Error-Affirmations-Logo.png)
+<br>
 
 Error Affirmations Jest Reporter gives you much needed code-related affirmations whenever your tests fail.
 
@@ -10,13 +13,13 @@ GitHub - https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter
 
 ### **Preview**
 
-![Jest Example Default](./images/Jest_Example_Default.png)
+<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Jest_Example_Default.png" alt="Error-Affirmations-Example" width="800"/>
 
 <br>
 
 ### Customize with **Color** and **Border** Themes!!!
 
-![Jest Example Themes](./images/Jest_Example_Themes.png)
+<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Jest_Example_Themes.png" alt="Error-Affirmations-Example" width="800"/>
 
 <br>
 
@@ -52,14 +55,15 @@ For example, add the following "jest" configuration in your package.json file:
 ### (Optionally) Customize the **color** and **border** theme
 
 ```json
-"jest": {
+ "jest": {
      "reporters": [
          "default",
-        ["error-affirmations",
-            { "color": "driven", "border": "waves"}
+            ["error-affirmations", {
+                "colorTheme": "driven",
+                "borderTheme": "waves"
+            }]
         ]
-    ]
-},
+    },
 ```
 
 <br>
@@ -72,20 +76,20 @@ For example, add the following "jest" configuration in your package.json file:
     "mode": "info",
 ```
 
-| colorTheme |                                                                            | borderTheme |                  |
-| ---------- | -------------------------------------------------------------------------- | ----------- | ---------------- |
-| love       | ![color-theme-love](./images/color-theme/color-theme-love.png)             | bamboo      | <>--<>--<>--<>-- |
-| happiness  | ![color-theme-happiness](./images/color-theme/color-theme-happiness.png)   | waves       | ...oOo...oOo...o |
-| serenity   | ![color-theme-serenity](./images/color-theme/color-theme-serenity.png)     | simple      | ---------------- |
-| driven     | ![color-theme-driven](./images/color-theme/color-theme-driven.png)         | fence       | O----O----O----O |
-| spooky     | ![color-theme-spooky](./images/color-theme/color-theme-spooky.png)         | frame       | +--------------+ |
-| optimistic | ![color-theme-optimistic](./images/color-theme/color-theme-optimistic.png) | hearts1     | <3 <3 <3         |
-| rainbow    | ![color-theme-rainbow](./images/color-theme/color-theme-rainbow.png)       | hearts2     | <3 <3 <3         |
-| mono       | ![color-theme-mono](./images/color-theme/color-theme-mono.png)             | banner      | '°º¤ø,.,ø¤°º¤ø,. |
-| white      | ![color-theme-white](./images/color-theme/color-theme-white.png)           | dotty       | ':' ':' ':' ':'  |
-| grey       | ![color-theme-grey](./images/color-theme/color-theme-grey.png)             | coffeeLuv1  | <3 c[] <3        |
-|            |                                                                            | coffeeLuv2  | <3 c[] <3        |
-|            |                                                                            | smiley      | (ɔ◔‿◔)ɔ ♥        |
+| colorTheme |                                                                                                                                                                      | borderTheme |                  |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------- |
+| love       | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-love.png" alt="color-theme-love">             | bamboo      | <>--<>--<>--<>-- |
+| happiness  | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-happiness.png" alt="color-theme-happiness">   | waves       | ...oOo...oOo...o |
+| serenity   | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-serenity.png" alt="color-theme-serenity">     | simple      | ---------------- |
+| driven     | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-driven.png" alt="color-theme-driven">         | fence       | O----O----O----O |
+| spooky     | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-spooky.png" alt="color-theme-spooky">         | frame       | +--------------+ |
+| optimistic | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-optimistic.png" alt="color-theme-optimistic"> | hearts1     | <3 <3 <3         |
+| rainbow    | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-rainbow.png" alt="color-theme-rainbow">       | hearts2     | <3 <3 <3         |
+| mono       | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-mono.png" alt="color-theme-mono">             | banner      | '°º¤ø,.,ø¤°º¤ø,. |
+| white      | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-white.png" alt="color-theme-white">           | dotty       | ':' ':' ':' ':'  |
+| grey       | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-grey.png" alt="color-theme-grey">             | coffeeLuv1  | <3 c[] <3        |
+|            |                                                                                                                                                                      | coffeeLuv2  | <3 c[] <3        |
+|            |                                                                                                                                                                      | smiley      | (ɔ◔‿◔)ɔ ♥        |
 
 <br>
 
@@ -95,7 +99,7 @@ For example, add the following "jest" configuration in your package.json file:
 
 https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations
 
-![Error-Affirmations VSCode Extension](./images/notificationbar.png)
+<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/notificationbar.png" alt="Error-Affirmations-Logo" width="600"/>
 
 #### **Error Affirmations** - Website:
 
