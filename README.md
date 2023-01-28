@@ -1,14 +1,27 @@
 <div style="display:grid; justify-content:center; grid-template-columns:repeat(3,auto);">
  
 ![img1](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png)
+
 ![img2](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png?raw=true)
+
 ![img3](./images/Error-Affirmations-Logo.png)
+
 ![img4](/images/Error-Affirmations-Logo.png)
+
 ![img5](images/Error-Affirmations-Logo.png)
+
 [![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+
 [![img6](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png)](http://expressjs.com/)
+
 [![img7](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png?raw=true)](http://expressjs.com/)
+
 [![img8](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png?raw=true)](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/)
+
+[![img8](https://i.imgur.com/QMqZVlz.jpg)](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/)
+
+[img9](https://i.imgur.com/QMqZVlz.jpg)
+
 <h1>Error Affirmations - Jest Reporter</h1>
 </div>
 
