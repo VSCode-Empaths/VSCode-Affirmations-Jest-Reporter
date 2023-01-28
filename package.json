@@ -1,7 +1,7 @@
 {
     "name": "error-affirmations",
     "author": "VSCode_Empaths",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "Get affirmations when your tests fail!",
     "main": "index.js",
     "scripts": {
