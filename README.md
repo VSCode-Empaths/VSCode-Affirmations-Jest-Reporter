@@ -1,6 +1,11 @@
 <div style="display:grid; justify-content:center; grid-template-columns:repeat(3,auto);">
  
-<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png?raw=true" alt="Error-Affirmations-Logo" width="225" style="margin-bottom:-10px"/><h1>Error Affirmations - Jest Reporter</h1>
+![img1](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png)
+![img2](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png?raw=true)
+![img3](./images/Error-Affirmations-Logo.png)
+![img4](/images/Error-Affirmations-Logo.png)
+![img5](images/Error-Affirmations-Logo.png)
+<h1>Error Affirmations - Jest Reporter</h1>
 </div>
 
 <br>
