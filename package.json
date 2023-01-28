@@ -1,6 +1,6 @@
 {
     "name": "error-affirmations",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "description": "Get affirmations when your tests fail!",
     "main": "index.js",
     "scripts": {
