@@ -1,11 +1,8 @@
-<div style="display:grid; justify-content:center; grid-template-columns:repeat(3,auto);">
- 
-<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Error-Affirmations-Logo.png" alt="Error-Affirmations-Logo" width="225" style="margin-bottom:-10px"/><h1>Error Affirmations - Jest Reporter</h1>
-</div>
+# [![img8](https://i.imgur.com/dOjbaYz.png)](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/) Error Affirmations - Jest Reporter [![img8](https://i.imgur.com/dOjbaYz.png)](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/)
 
 <br>
 
-Error Affirmations Jest Reporter gives you much needed code-related affirmations whenever your tests fail.
+Our Jest Reporter gives you much needed code-related affirmations whenever your tests fail.
 
 GitHub - https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter
 
@@ -13,13 +10,13 @@ GitHub - https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter
 
 ### **Preview**
 
-<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Jest_Example_Default.png" alt="Error-Affirmations-Example" width="800"/>
+![default_border_color](https://i.imgur.com/fUP85qh.png)
 
 <br>
 
 ### Customize with **Color** and **Border** Themes!!!
 
-<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/Jest_Example_Themes.png" alt="Error-Affirmations-Example" width="800"/>
+![custom_border_color](https://i.imgur.com/EgmOC34.png)
 
 <br>
 
@@ -38,7 +35,7 @@ npm i --save-dev error-affirmations
 Configure [Jest](https://facebook.github.io/jest/docs/en/configuration.html) to use the reporter:
 
 For example, add the following "jest" configuration in your package.json file:
-(include the "default" reporter to keep jest's default reporter output)
+(make sure to include the "default" reporter to preserve jest's default output)
 
 ```json
  "jest": {
@@ -68,28 +65,25 @@ For example, add the following "jest" configuration in your package.json file:
 
 <br>
 
-### **Color and Border Theme Options**:
+### **Theme Options**:
 
-(A list of the available colors and borders can also be displayed in the reporter options by adding "mode": "info", in the reporter options)
+A list of the available colors and borders can also be displayed in the reporter options by adding "mode": "info", in the reporter options.
 
 ```json
     "mode": "info",
 ```
 
-| colorTheme |                                                                                                                                                                      | borderTheme |                  |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ---------------- |
-| love       | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-love.png" alt="color-theme-love">             | bamboo      | <>--<>--<>--<>-- |
-| happiness  | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-happiness.png" alt="color-theme-happiness">   | waves       | ...oOo...oOo...o |
-| serenity   | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-serenity.png" alt="color-theme-serenity">     | simple      | ---------------- |
-| driven     | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-driven.png" alt="color-theme-driven">         | fence       | O----O----O----O |
-| spooky     | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-spooky.png" alt="color-theme-spooky">         | frame       | +--------------+ |
-| optimistic | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-optimistic.png" alt="color-theme-optimistic"> | hearts1     | <3 <3 <3         |
-| rainbow    | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-rainbow.png" alt="color-theme-rainbow">       | hearts2     | <3 <3 <3         |
-| mono       | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-mono.png" alt="color-theme-mono">             | banner      | '°º¤ø,.,ø¤°º¤ø,. |
-| white      | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-white.png" alt="color-theme-white">           | dotty       | ':' ':' ':' ':'  |
-| grey       | <img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/color-theme/color-theme-grey.png" alt="color-theme-grey">             | coffeeLuv1  | <3 c[] <3        |
-|            |                                                                                                                                                                      | coffeeLuv2  | <3 c[] <3        |
-|            |                                                                                                                                                                      | smiley      | (ɔ◔‿◔)ɔ ♥        |
+![Imgur](https://i.imgur.com/7Tmj3x3.png)
+
+<br>
+
+### **Keep it Simple!**:
+
+We also provide an option for you minimalists out there! With "mode": "minimal", you get to enjoy the same great affirmations but without the border decorations.
+
+```json
+    "mode": "minimal",
+```
 
 <br>
 
@@ -99,7 +93,7 @@ For example, add the following "jest" configuration in your package.json file:
 
 https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations
 
-<img src="https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/blob/main/images/notificationbar.png" alt="Error-Affirmations-Logo" width="600"/>
+[![VSCode Extension](https://i.imgur.com/F1vyARv.png)](https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations)
 
 #### **Error Affirmations** - Website:
 
