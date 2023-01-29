@@ -72,10 +72,7 @@ class CustomReporter {
             // Create string with color name + pattern
             const colorInfoStrings = createColorInfoStrings(colorThemes);
             // Create string with border name + pattern
-            const borderStrings = createBorderInfoStrings(
-                borderThemes,
-                infoTxtColors.body
-            );
+            const borderStrings = createBorderInfoStrings(borderThemes, infoTxtColors.body);
             // Find larger object (for formatting)
             const longerArray = findLongerArrayLength(colorInfoStrings, borderStrings);
 
@@ -91,14 +88,14 @@ class CustomReporter {
         if (results.numFailedTests > 0) {
             // display affirmation in terminal
             console.log(); // Newline
-            if (this.mode !== "short") {
+            if (this.mode !== "minimal") {
                 console.log(createGradString(this.border[0], this.colorGrad)); // Border
                 console.log(createGradString(this.border[1], this.colorGrad)); // Border
                 console.log(); // Newline
             }
             console.log(createColorString(this.affirmation, this.colors[0], "bold")); // Affirmation
             console.log(); // Newline
-            if (this.mode !== "short") {
+            if (this.mode !== "minimal") {
                 console.log(createGradString(this.border[1], this.colorGrad)); // Border
                 console.log(createGradString(this.border[0], this.colorGrad)); // Border
             }
