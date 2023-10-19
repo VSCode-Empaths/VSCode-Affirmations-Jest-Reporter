@@ -4,6 +4,8 @@ _"You are_ **_not_** _defined by your code"_
 
 ![Error Affirmations Jest Reporter Header](images/error_affirmations_jest_reporter_header.png)
 
+[npm](https://www.npmjs.com/package/error-affirmations) • [GitHub](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter)
+
 Receive all your favorite _Error Affirmations_, when you need them most!
 
 With an easy install and a variety of options for customization, our Jest Reporter is sure to help soften the blow from any failing tests and give you the confidence to carry on!
