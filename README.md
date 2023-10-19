@@ -1,44 +1,40 @@
-# [![img8](https://i.imgur.com/dOjbaYz.png)](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/) Error Affirmations - Jest Reporter [![img8](https://i.imgur.com/dOjbaYz.png)](https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter/)
+# Error Affirmations - Jest Reporter
 
-<br>
+_"You are_ **_not_** _defined by your code"_
 
-Our Jest Reporter gives you much needed code-related affirmations whenever your tests fail.
+![Error Affirmations Jest Reporter Header](images/error_affirmations_jest_reporter_header.png)
 
-GitHub - https://github.com/VSCode-Empaths/VSCode-Affirmations-Jest-Reporter
+Receive all your favorite _Error Affirmations_, when you need them most!
 
-<br>
+With an easy install and a variety of options for customization, our Jest Reporter is sure to help soften the blow from any failing tests and give you the confidence to carry on!
 
-### **Preview**
+## Made with
 
-![default_border_color](https://i.imgur.com/fUP85qh.png)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=Javascript&logoColor=black&style=for-the-badge)&nbsp;![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=Node.js&logoColor=black&style=for-the-badge)&nbsp;
 
-<br>
+## Features
 
-### Customize with **Color** and **Border** Themes!!!
+* Affirmations are **automatically displayed** alongside your Jest test report, whenever your tests fail.
+* Affirmations are fetched from the [**Error Affirmations API**](https://github.com/VSCode-Empaths/VSCode-Affirmations-Backend), which uses Affirmations submitted from users worldwide.
+* **Customize** the look and feel with our large selection of color palettes and border themes!
+* Change mode to "info" to reveal **instructions** and configuration options in your terminal.
 
-![custom_border_color](https://i.imgur.com/EgmOC34.png)
+## Preview
 
-<br>
+![Error-Affirmations-Preview](images/error-affirmations-preview.gif)
 
-## **Installation**
+## Usage
 
-You may install this package as a development dependency:
+1\. **Install** using npm
 
 ```bash
 npm i --save-dev error-affirmations
 ```
 
-<br>
+2\. **Configure** Jest to use our custom [reporter](https://jestjs.io/docs/configuration#reporters-arraymodulename--modulename-options) by putting the following in your package.json
 
-## **Configuration**
-
-Configure [Jest](https://facebook.github.io/jest/docs/en/configuration.html) to use the reporter:
-
-For example, add the following "jest" configuration in your package.json file:
-(make sure to include the "default" reporter to preserve jest's default output)
-
-```json
- "jest": {
+```javascript
+"jest": {
      "reporters":
         [
             "default",
@@ -47,63 +43,65 @@ For example, add the following "jest" configuration in your package.json file:
     },
 ```
 
-<br>
+3\. **Run** Jest as usual
 
-### (Optionally) Customize the **color** and **border** theme
-
-```json
- "jest": {
-     "reporters": [
-         "default",
-            ["error-affirmations", {
-                "colorTheme": "driven",
-                "borderTheme": "waves"
-            }]
-        ]
-    },
+```bash
+jest
 ```
 
-<br>
+4\. **Receive** an Error Affirmation!
 
-### **Theme Options**:
+![Error Affirmations Jest Reporter Screenshot 1](images/error_affirmations_jest_reporter_screenshot_1.png)
 
-A list of the available colors and borders can also be displayed in the reporter options by adding "mode": "info", in the reporter options.
+## Configure
 
-```json
-    "mode": "info",
+Optionally change the **Color-Palette** and **Border-Theme** by adding an extra config in your package.json
+
+```javascript
+  jest: {
+    reporters: [
+      "default",
+      ["error-affirmations",
+        {
+          colorTheme: "driven",
+          borderTheme: "waves",
+          mode: "normal",
+        },
+      ],
+    ],
+  }
 ```
 
-![Imgur](https://i.imgur.com/7Tmj3x3.png)
+Here, we have selected _"driven"_ as the color theme and _"waves"_ as the border theme. You may change these values to suit your own preferences!
 
-<br>
+To see a list of all the available colors and borders, change the `"mode"` to `"info"` and the next time your affirmation is displayed, the following info will appear:
 
-### **Keep it Simple!**:
+![Error Affirmations Info Window Screenshot](images/error_affirmations_info_window_screenshot.png)
 
-We also provide an option for you minimalists out there! With "mode": "minimal", you get to enjoy the same great affirmations but without the border decorations.
+The `"mode"` may also be set to `"minimal"` which will hide any borders and just show the affirmations.
 
-```json
-    "mode": "minimal",
-```
+## Authors
 
-<br>
+* [Rio Edwards](https://github.com/rioredwards)
+* [Karl Wernsman](https://github.com/orgs/VSCode-Empaths/people/karlwernsman)
+* [Kevin Nail](https://github.com/orgs/VSCode-Empaths/people/kevinnail)
+* [Zach Sultan](https://github.com/Zacharyjsultan)
 
-## **Check out our other apps!**
+## Check Out Our Other Apps!
 
-#### **Error Affirmations** - VS Code Extension:
+### VSCode Extension
 
-https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations
+[Try](https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations) \- [GitHub](https://github.com/VSCode-Empaths/VSCode-Affirmations-Extension-Frontend)
 
-[![VSCode Extension](https://i.imgur.com/F1vyARv.png)](https://marketplace.visualstudio.com/items?itemName=VSCodeEmpaths.erroraffirmations)
+![Error Affirmations VSCode Extension Preview](images/error_affirmations_vscode_extension_preview.png)
 
-#### **Error Affirmations** - Website:
+### Website
 
-https://error-affirmations.netlify.app/
+[Try](https://error-affirmations.netlify.app/) \- [GitHub](https://github.com/VSCode-Empaths/VSCode-Affirmations-Web-Frontend)
 
-<br>
+![Error Affirmations Website Preview](images/error_affirmations_website_preview.png)
 
-## **Meet the team**
+### Backend
 
--   Karl Wernsman - <a href="https://www.linkedin.com/in/karl-wernsman/" >LinkedIn</a>
--   Kevin Nail - <a href="https://www.linkedin.com/in/kevinnail/" >LinkedIn</a>
--   Rio Edwards - <a href="https://www.linkedin.com/in/rio-edwards/" >LinkedIn</a>
--   Zach Sultan - <a href="https://www.linkedin.com/in/zachary-sultan/" >LinkedIn</a>
+[GitHub](https://github.com/VSCode-Empaths/VSCode-Affirmations-Backend)
+
